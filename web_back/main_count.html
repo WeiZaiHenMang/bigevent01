@@ -466,12 +466,19 @@
             })
             // <!-- 评论数量总计 -->
         $.get('http://localhost:8000/admin/comment_count', function(res) {
-            console.log(res)
-            if (res.code === 200) {
-                $('#comment_count-sum').text(res.data.all_count)
-                $('#comment_count-day').text(res.data.day_count)
-            }
-        })
+                // console.log(res)
+                if (res.code === 200) {
+                    $('#comment_count-sum').text(res.data.all_count)
+                    $('#comment_count-day').text(res.data.day_count)
+                }
+            })
+            // <!-- 月新增文章数  -->
+            // $.get('http://localhost:8000/admin/month_article_count', function(res) {
+            //     console.log(res);
+            //     if (res.code === 200) {
+            //         aList_all.text(res.data);
+            //     }
+            // })
     </script>
 
 
